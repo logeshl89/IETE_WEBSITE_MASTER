@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/Main-style.css">
+    <link rel="stylesheet" href="css/footer-style.css">
+    <style>
+        *{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: ‘Roboto', 'sans-serif';
+    
+}
+
+body
+{
+        background-color: blue;
+}
+.blog-section{
+    width: 100%;
+}
+.blog-section .section-content{
+    width: 85%;
+    margin: 20px auto;
+}
+
+.blog-section .section-content  .title{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.blog-section .section-content  .title h2{
+    font-size: 40px;
+    margin-top: 120px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.blog-section .section-content .title p{
+    font-size: 18px;
+    margin-top: 120px;
+    color: #6a6a6a;
+    margin-top: 20px;
+}
+.blog-section .section-content  .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    margin:25px auto;
+}
+
+.blog-section .section-content  .cards .card{
+width: 1005;
+background-color: #f7f7f7;
+position: relative;
+
+}
+
+.blog-section .section-content  .cards .card img{ 
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    }
+ .blog-section .section-content  .cards .card .article{ 
+       padding: 15px 20px;
+}
+.blog-section .section-content  .cards .card .article h4{ 
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4a4a4a;
+
+}
+.blog-section .section-content  .cards .card .article p{ 
+    font-size: 16px;
+    margin: 10px 0px;
+    color:#6a6a6a;    
+}
+.blog-section .section-content  .cards .card  a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #25c5c5;
+    padding: 8px 15px;
+    margin-left: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+} 
+.blog-section .section-content  .cards .card .posted-date p{
+    font-weight: 600;
+
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    display: inline-block;
+    color: white;
+    font-size: large;
+    border-bottom-right-radius: 20px; 
+    background-color: #25c5c5;
+    padding: 6px 15px;
+}
+
+
+.blog-section .section-content  .cards .card .image-section{
+    background-color: blue;
+}
+.blog-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (max-width:992px){
+    .blog-section .section-content  .cards{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+
+@media screen and (max-width:768px){
+    .blog-section .section-content  .cards{
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+
+/* Try */
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.blog-section .section-content  .cards .card img:hover{
+    transition: transform .2s;
+
+}
+
+
+
+/* animation */
+/* Add a new animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the card class */
+.blog-section .section-content .cards .card {
+    width: 100%;
+    background-color: #f7f7f7;
+    position: relative;
+    animation: fadeIn 0.5s ease-out both;
+}   
+
+        .popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-text {
+    margin-top: 20px;
+}
+
+/* Add hover animation to the card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add transitions for smoother animations */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style the image section */
+.image-section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+/* Two line show  */
+.article p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to two lines */
+    -webkit-box-orient: vertical;
+}
+
+
+/* Add zoom effect to the image on hover */
+.card:hover .image-section img {
+    transform: scale(1.1);
+}
+
+/* Style the article section */
+
+.article h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.article p {
+    margin: 0;
+    color: #666;
+}
+.popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 95%;
+            max-width: 1200px;
+            height: 60%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .popup-content-wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .popup-image {
+            flex: 1;
+            padding-right: 20px;
+            width: 100%;
+        }
+
+        .popup-image img {
+            width: 100%;
+            height:100%;
+        }
+
+        .popup-details {
+            flex: 2;
+        }
+        /* Add this rule to adjust the font size within the pop-up */
+.popup-details h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.popup-text p {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.popup-details p {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+/* Adjust these styles for left-centered image within the pop-up */
+.popup-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.popup-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- ... Existing HTML ... -->
+<div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <div class="popup-content-wrapper">
+            <div class="popup-image">
+                <img src="" alt="" id="popupImage">
+                <p id="popupStartDate"></p>
+            </div>
+            <div class="popup-details">
+                <h4 id="popupTitle"></h4>
+                <div class="popup-text" id="popupText"></div>
+                <p id="popupEndDate"></p>
+                <p id="popupAuthorName"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+     
+       <div class="blog-section">
+        <div class="section-content blog">
+            <div class="title">
+                <h2>Blog &news</h2>
+                <p>Events</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/chencon2022.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>EVOLUTION OF COMPUTING AND SKILL SETS FOR THE FUTURE</h4>
+                        <p>Recently, the use of AI/ML technology has been exponentially increasing in our daily lives. AI/ML applications represent an important evolution in computer science and data processing that is quickly transforming a vast array of domains. IETE CHENCON 2022 provides vibrant opportunities for the delegates to exchange new ideas, applications, practical challenges encountered and to leverage AI and ML technologies. The technical program of the conference will consist of invited key note talks and paper presentations. IETE CHENCON 2022 accepts technical paper presentation from research scholars, faculty, students and industry professionals in emerging areas of AI and ML applications but not limited to:</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/Slide10.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>COVID 19 AND AI SOLUTIONS</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, eveniet officia? Corporis perferendis ratione pariatur, itaque architecto voluptates laudantium nam est maxime tempora modi nihil cum reprehenderit, nisi dignissimos asperiores.</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/Slide9.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>MATLAB PROGRAMMING TECHNIQUES</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, eveniet officia? Corporis perferendis ratione pariatur, itaque architecto voluptates laudantium nam est maxime tempora modi nihil cum reprehenderit, nisi dignissimos asperiores.</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/chencon2022.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>recent Trends in optical communication systems</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, eveniet officia? Corporis perferendis ratione pariatur, itaque architecto voluptates laudantium nam est maxime tempora modi nihil cum reprehenderit, nisi dignissimos asperiores.</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/chencon2022.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>AN INTRODUCTION TO IoT AND APPLICATIONS</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, eveniet officia? Corporis perferendis ratione pariatur, itaque architecto voluptates laudantium nam est maxime tempora modi nihil cum reprehenderit, nisi dignissimos asperiores.</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="http://ietechennai.in/assets/img/events/Slide4.jpeg" alt="">
+                    </div>
+                    <div class="article">
+                        <h4>PROFESSIONAL RESUME WRITING</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, eveniet officia? Corporis perferendis ratione pariatur, itaque architecto voluptates laudantium nam est maxime tempora modi nihil cum reprehenderit, nisi dignissimos asperiores.</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="javascript:void(0);" class="button">Read more</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>posted on Jan 15 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const popupContainer = document.getElementById("popupContainer");
+    const closePopup = document.getElementById("closePopup");
+    const popupImage = document.getElementById("popupImage");
+    const popupText = document.getElementById("popupText");
+
+    const readMoreButtons = document.querySelectorAll(".button");
+    readMoreButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const card = button.closest(".card");
+            const imageSrc = card.querySelector(".image-section img").src;
+            const articleTitle = card.querySelector(".article h4").textContent;
+            const articleContent = card.querySelector(".article p").textContent;
+            const startdate=card.querySelector(".posted-date p").textContent;
+            popupImage.src = imageSrc;
+            popupText.innerHTML = `<h1>${articleTitle}</h1><br/><hr/><br/><br/>${articleContent}<p>Posted on: ${startdate}</p>`;
+
+
+            popupContainer.style.display = "block";
+        });
+    });
+
+    closePopup.addEventListener("click", function () {
+        popupContainer.style.display = "none";
+    });
+});
+
+
+</script>
+</html>

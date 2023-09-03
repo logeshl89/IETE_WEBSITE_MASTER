@@ -1,0 +1,63 @@
+/* Existing styles */
+
+.typing-text-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image-container {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px; 
+    z-index: -1;
+}
+
+.background-image {
+    opacity: .4;
+    background-size: cover;
+    background-position: center;
+    position:static;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#typing-text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* Add the rest of your styles here */
+/* Existing styles */
+
+
+
+/* Add a media query for screens with a maximum width of 491px */
+@media screen and (max-width: 491px) {
+    #typing-text {
+        font-size: 20px; /* Adjust font size as needed */
+        white-space: normal; /* Allow text to wrap */
+        border-right: none; /* Remove the blinking caret */
+        animation: none; /* Remove the typing animation */
+        text-align: center; /* Center the wrapped text */
+    }
+}
+
+/* Rest of your existing styles */

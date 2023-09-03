@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <title>IETE | Courses</title>
+<style>
+    *{
+    padding:0;
+    margin: 0;
+}
+.heading h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+.heading p{
+    margin: 20px;
+    font-size: 20px;
+}
+.heading p::first-letter,.centres_contain p::first-letter {
+    font-size: 150%; 
+    margin-left: 50px;
+}
+.syllabus_contain{
+    font-size: 20px;
+    margin: auto ;
+    padding: 20px;
+    border: 1px solid black;
+    width: 480px;
+}
+.syllabus a,.centres_contain a{
+    text-decoration: none;
+}
+.syllabus a:hover{
+    color: red;
+}
+.syllabus li{
+    margin-bottom: 5px;
+}
+#lastline{
+    margin-left: 50px;
+}
+.centres_contain p{
+    text-align: center;
+    font-size: 20px;
+}
+.centres{
+    text-align: center;
+    font-size: 30px;
+}
+.centres a{
+    color: red;
+}
+.centres a:hover{
+    color: blue;
+}
+.content {
+    padding: 30px;
+}
+.section-heading {
+    color:royalblue;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.paragraph {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+#labexam{
+    color: black;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+#lab-exemption{
+    color: black;
+    font-weight: bold;
+}
+.lab-exam-eligible li{
+    padding: 10px;
+    font-size: 15px;
+        list-style-position: inside;
+    
+    
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 60%; 
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.button {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3; 
+}
+
+.section-heading {
+    background-color: #f0f0f0; 
+    color: #333; 
+    cursor:default;
+}
+
+.paragraph {
+    color: #555; 
+}
+
+.section-heading {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: gray;
+
+    color: black;
+    padding: 10px;
+}
+
+
+.syllabus_contain {
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.syllabus_contain {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+}
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; 
+}
+
+.center-last-box {
+    grid-column: span 2;
+    justify-self: center;
+    text-align: center;
+}
+
+#general-instructions-heading {
+    text-align: center;
+    font-size: 24px; 
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.boxed-container {
+    margin: 20px auto;
+    padding: 40px;
+    border: 1px solid #000;
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7; 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content {
+    display: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding: 10px; 
+}
+#labexam{
+    color: black;
+}
+
+
+
+.syllabus_contain {
+    font-size: 20px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 480px;
+    text-align: center;
+
+    transform: scale(1); 
+}
+
+
+.syllabus_contain:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+.syllabus {
+    list-style: none;
+    padding: 0;
+}
+
+.syllabus li {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.syllabus a {
+    text-decoration: none;
+    color: black;
+}
+
+.syllabus a:hover {
+    color: red;
+}
+
+
+#lastline {
+    margin-left: 50px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+/* Style the table section header cells (first column) */
+td:first-child {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Style the table section header cells (second column) */
+td:nth-child(2) {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Add a hover effect on table rows */
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+  /* Responsive styles for tablets */
+  @media (max-width: 768px) {
+    .heading h2 {
+        font-size: 32px;
+    }
+
+    .heading p {
+        font-size: 18px;
+    }
+
+    .syllabus_contain {
+        max-width: 100%;
+    }
+    .grid-content {
+        grid-template-columns: 1fr; /* Single column layout for tablets */
+    }
+    
+    .center-last-box {
+        grid-column: auto; /* Reset the grid-column property */
+    }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 480px) {
+    .heading h2 {
+        font-size: 28px;
+    }
+
+    .heading p {
+        font-size: 16px;
+    }
+
+    .syllabus_contain {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+    .grid-content {
+        grid-gap: 5px;
+    }
+}
+.main-on{
+    margin-top:130px ;
+}
+
+</style>
+<link rel="stylesheet" href="css/Main-style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo">
+            <img src="http://ietechennai.in/assets/img/logo.png" alt="Logo of Iete" style="height: 40px; width: 40px;">
+            <a href="index.html" title="The Institution of Electronics and Telecommunication Engineers ">IETE</a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name" title="The Institution of Electronics and Telecommunication Engineers ">CodingLab</span>
+              <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="executive_members.html">Executive Committe</a></li>
+              <li><a href="Membership.html">Membership</a></li>  
+              <li>
+                <a href="#">conferences</a>
+                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li><a href="Events.html">Events</a></li>
+                  <li class="more">
+                    <span><a href="#">NewLetter</a>
+                      <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                      <li><a href="http://ietechennai.in/assets/pdf/chenlink1_3.pdf" target="_blank">vol.1,No.3</a></li>
+  
+                      <li><a href="http://ietechennai.in/assets/pdf/chenlink1_2.pdf" target="_blank">vol.1,No.2</a></li>
+  
+                      <li><a href="http://ietechennai.in/assets/pdf/chenlink1_1.pdf" target="_blank">vol.1,No.3</a></li>
+  
+                     </ul>
+                    </li>
+                  <li class="more">
+                    <span><a href="#">Chencon</a>
+                    <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                  </span>
+                    <ul class="more-sub-menu sub-menu">
+                      <li><a href="conference.html">2021</a></li>
+                      <li><a href="http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf">2022</a></li>
+                     </ul>
+                  </li>
+                </ul>
+              </li>
+                <i class='bx bxs-chevron-down js-arrow arrow ' style="color: transparent; margin: 0;padding: 0;"></i>
+              <li><a href="about-us.html">ABOUT US</a></li>
+              <li><a href="contact.html">CONTACT US</a></li>
+              <li><a href="courses.html">Courses</a></li>
+                <li><button><a href="Membership.html">Join Us</a> </button></li>
+  
+            </ul>
+          </div>
+          <div class="search-box" style="background-color: transparent; margin: 0; padding: 0;">
+            <i class='bx bx-search'style="color: transparent; margin: 0; padding: 0;"></i>
+            <div class="input-box">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+  <section >
+    <div class="main-on">
+      <div class="heading" >
+        <h2>AMIETE(old)</h2>
+        <p>AMIETE Graduate Level examinations, a pass in which is recognized by the Govt. of India, Ministry of HRD & Union Public Service Commission for the purpose of recruitment to superior posts & services under the Central Govt. Several State Govts, Universities and Institutions in India and abroad have also recognised AMIETE.</p>
+      </div>
+      <div class="syllabus_contain">
+        <p>Three streams are available:</p> 
+        <ul class="syllabus">
+          <li><a href="https://www.iete.org/amite_electronics_syllabus.htm" target="_blank">Electronics & Telecom Engineering (ET)</a></li>
+          <li><a href="https://www.iete.org/amite_computer_syllabus.htm" target="_blank">Computer Science & Engineering  (CS)</a></li>
+          <li><a href="https://www.iete.org/amite_it_syllabus.htm" target="_blank">Information Technology ( IT )</a></li>
+        </ul>
+        <p id="lastline">Details of all the subjects are given in the respective  syllabi.</p>
+      </div>
+      <div class="centres_contain">
+        <p>AMIETE examinations are conducted twice a year, in June and December respectively, at several Centres throughout India and a few locations abroad.</p>
+        <div class="centres">
+        <a href="https://www.iete.org/exam_centres.htm" target="_blank">Centres</a>
+      </div>
+      </div>
+    </div>
+    <hr>
+  </section>
+  
+<section>
+  <div class="content">
+      <div class="section-heading">ELIGIBILITY</div>
+      <div class="paragraph">
+          A candidate desirous of taking up the Graduateship (AMIETE) Examination should have passed 10+2 examination with Physics & Maths conducted by a recognised Board of Education or possessing qualification of any 3 year Diploma course in Engineering / Technology covering subjects of Maths and Physics to 10+2 level and working experience in relevant field or studying for higher qualification with physics/electrical/electronics/computer field. Candidates applying for studentship for AMIETE examination shall not be less than 16/18 years of age for 10+2/Diploma holders respectively.
+      </div>
+
+      <div class="section-heading">STUDENT MEMBERSHIP</div>
+      <div class="paragraph">
+          A candidate is required to enroll himself/herself as a student member before he/she becomes eligible for appearing in AMIETE examination. The enrollment fee and other conditions are listed in Regulations and Syllabi for AMIETE examinations.
+      </div>
+
+      <div class="section-heading">MINIMUM PERIOD OF MEMBERSHIP</div>
+      <div class="paragraph">
+          A Student member shall be allowed to appear in the AMIETE Examination only after he/she has enrolled as a Student member with the Institution. Only those Student members who get enrolled on or before 31st August and 28/29th February will be allowed to appear in the next AMIETE Examination, held in December and June respectively. Such membership should be current at the time of submitting the examination application form.
+      </div>
+
+      <div class="section-heading">VALIDITY PERIOD</div>
+      <div class="paragraph">
+          The student membership will be valid for 10 consecutive examinations from the date of enrollment. Thereafter, the student members not completing their AMIETE Examination are to seek re-enrollment by remitting applicable amount before or immediately after the expiry of the membership period to continue their membership to enable them to appear in the remaining papers and complete AMIETE. Any examination chance not availed by a student due to whatsoever reason will be counted within 10 examinations.
+      </div>
+
+      <div class="section-heading">TIME LIMIT TO COMPLETE AMIETE</div>
+      <div class="paragraph">
+          A student is required to complete AMIETE Examination within 2 enrollment periods from the date of initial enrollment. The student will, therefore, be permitted to seek only one renewal of membership. Renewal is to be applied for before or immediately after the expiry of initial enrollment with continuity of enrollment maintained by the student. Any delayed enrollment entailing missed chances will be counted towards total number of examinations and no relaxation in this regard will be permissible. If the request for renewal is made after the stipulated period of 2 enrollments, admission will be treated as a fresh enrollment and no benefit in terms of exemptions in respect of subject(s) passed or exempted during the earlier enrollment will be granted. Students must renew their membership in time, otherwise they will not be allowed to appear in the AMIETE examination.
+      </div>
+      <hr>
+      <div class="sub_table">
+        <div>
+          <h2 class="section-heading">AMIETE SUBJECTS</h2>
+          <p class="paragraph">AMIETE examination is divided in two Sections with 20 theory papers and a project work.  Each Section is divided in two parts viz. Part-I and Part-II.  The distribution of subjects is as under:</p>
+        </div>
+        <table>
+          <tr>
+              <th>Section</th>
+              <th>Part</th>
+              <th>Subjects</th>
+          </tr>
+          <tr>
+              <td rowspan="2">SECTION A</td>
+              <td>PART-I</td>
+              <td>Six subjects (all compulsory)</td>
+          </tr>
+          <tr>
+              <td>PART-II</td>
+              <td>Five subjects (all compulsory)</td>
+          </tr>
+          <tr>
+              <td rowspan="3">SECTION B</td>
+              <td>PART-I</td>
+              <td>Five subjects (all compulsory)</td>
+          </tr>
+          <tr>
+              <td>PART-II</td>
+              <td>Four subjects (2 compulsory + 2 electives)</td>
+          </tr>
+          <tr>
+              <td>PROJECT WORK</td>
+              <td>Compulsory</td>
+          </tr>
+      </table>
+      </div>
+      <div class="section-heading">CONDITION FOR APPEARING IN SECTION B PAPERS</div>
+        <div class="paragraph">
+            A candidate can appear in all the ten papers of Section A in the first attempt. However, a student can only appear in papers of Section B provided he/she has passed at least seven papers of Section A with an aggregate of 50% marks and has cleared his / her Lab Practice I examination.
+        </div>
+
+        <div class="paragraph">
+            Similarly, a student can only appear for elective papers of Section B provided he/she has passed at least 14 papers of Section A & B with an aggregate of 50% marks and cleared his / her Lab practice II examination.
+        </div>
+
+        <div class="section-heading">LAB PRACTICE EXAMINATION FOR ASSESSMENT OF PRACTICAL EXPERIENCE</div>
+        <div class="paragraph">
+            An AMIETE student is required to clear two practical-oriented tests viz. Lab Practice I & II examinations during the course of AMIETE Examinations.
+        </div>
+        <div class="section-heading" id="labexam">Lab Practice I Examination</div>
+        <div class="paragraph">
+            To become eligible for Lab Practice I Examination, a candidate should have: 
+            <ol class="lab-exam-eligible">
+              <li>Passed at least 7 papers of Section A with an aggregate of 50% marks.</li>
+              <li>Gained at least two years of practical experience/training in the field of electronics & telecommunication, computer science, and allied fields.</li>
+          </ol>
+        </div>
+        <div class="section-heading" id="labexam">Lab Practice II Examination</div>
+        <div class="paragraph">
+            To become eligible for Lab Practice II examination, a candidate should have:
+            <ol class="lab-exam-eligible">
+                <li>Passed at least 14 theory papers of Section A & B with an aggregate of 50% marks.</li>
+                <li>Gained an additional one-year & half of practical experience after his/her first appearance for Lab Practice-I examination.</li>
+            </ol>
+        </div>
+
+        <div class="paragraph">
+            These Lab Practice examinations will be through viva voce and practical test based on the list of experiments listed in respective Syllabi. Performance in Lab Practice Examination will be assessed by the Regional Evaluation Board (REB) set up at each examination centre.
+        </div>
+
+        <div class="paragraph">
+            Lab Practice examinations are held immediately after the main examinations in Jun/ Dec every year. A student is required to appear in Lab Practice examination from the same centre where he/she appeared in the main examination. Result of Lab Practice examination in respect of candidates appearing from any other Centre will not be accepted unless prior approval of IETE HQ has been obtained.
+        </div>
+
+        <div class="paragraph">
+            Candidates are to apply to their local examination centre for REB assessment with a bank Draft of Rs.200/- in favour of Chairman, local IETE centre.
+        </div>
+        <div class="section-heading" id="lab-exemption">EXEMPTION OF LAB PRACTICE - I</div>
+        <div class="paragraph">
+            Candidates belonging to the following categories are exempted from Lab Practice-I exam of ET stream:
+        </div>
+        <ul class="lab-exam-eligible">
+            <li>Diploma holders and Licentiates in Electrical/Electronics/Telecommunication/Industrial Electronics/Radio Engineering.</li>
+            <li>Candidates with M.Sc. (Physics) Degree with Electronics specialization (with at least two papers in Electronics & Telecommunication Engineering).</li>
+            <li>Candidates who have completed Post-B.Sc. Course in Applied Electronics/Advance Electronics/Diploma in Electronics etc. of at least one year duration.</li>
+            <li>B.Sc. (Electronics) Degree holders.</li>
+            <li>JTOs/JEs/Railway Signals and Telecommunication Inspectors/Asstt Signals and Telecommunication Engineers, Railways (A.S.T.E.)</li>
+        </ul>
+        <div class="paragraph">
+            Note: Candidates having diploma (3-year course) qualification in Computer Engg field are exempted from Lab Practice I exam of CS/IT stream.
+        </div>
+        <div class="paragraph">
+            Such students should seek Lab Practice-I exemption while applying for the main examination and paying an exemption fee of Rs 250/-. They are also required to gain one year of practical experience and pass at least 7 papers of Section A before being eligible for Section B papers.
+        </div>
+
+        <div class="section-heading">PROJECT WORK</div>
+        <div class="paragraph">
+            The project work can be taken up only after clearing 14 compulsory papers of Section A & B. Eligible students are required to submit their project applications to their Local center with a brief write-up of the intended project, bio-data of their guide, the guide's willingness letter to supervise the project, along with a draft of Rs 1000/- as a project fee. The Project applications should be submitted so as to reach the Local center by 20 Oct/20 April.
+        </div>
+        <div class="paragraph">
+            The project work will be assessed by an Assessment Board. Pass marks for the project will be 50%. Students not getting 50% marks will be required to re-register for the project following the usual procedure. The students will have the option of taking up a new project or continuing with the earlier project. No joint project is permissible. (For full details, see respective Syllabi)
+        </div>
+
+        <div class="section-heading">EXEMPTIONS</div>
+        <div class="paragraph">
+            Exemptions are granted in various papers depending on the subjects cleared by the candidate by actually passing the subjects and successfully completing the examination/curriculum, which includes these subjects from a recognized Institution/College/University and approved by the Council.
+        </div>
+        <div class="paragraph">
+            List of accepted qualifications for exemption from various papers of AMIETE examination is given separately in the detailed syllabi of each stream. Exemptions, if eligible, are not to be taken for granted but must be asked for.
+        </div>
+        <div class="paragraph">
+            Exemption, including that of Lab Practice where applicable, should be applied for through the exam application form along with a fee of Rs 250/ per subject, enclosing attested copies of relevant certificates and mark sheets of all semesters. Grant of exemption will be intimated to the concerned candidates through the result sheets of that examination.
+        </div>
+
+        <div class="section-heading">AWARD OF AMIETE</div>
+        <div class="paragraph">
+            Every Student Member successfully completing Section A & B subjects and project work of AMIETE Examination as per regulations prescribed by the Council from time to time shall be awarded a certificate of having passed the AMIETE examination of the Institution. The pass marks for AMIETE Examination is 40% in individual subject (except Project & Lab Practice) with an aggregate of 50% marks with other conditions/norms as laid down by the Institution. Pass marks for Project & Lab Practice Examination is 50%.
+        </div>
+
+        <div class="section-heading">EXAMINATION APPLICATIONS</div>
+        <div class="paragraph">
+            Applications to appear in any of the subjects of the AMIETE Examination must be made on the prescribed Examination Form and accompanied by the requisite examination fee. General Instructions for filling Examination Applications are given in the Syllabus. No action will be taken on an incomplete application. Students are advised to ensure that they have filled all the columns and have enclosed relevant documents. Further, change of subjects, once opted will not be allowed.
+        </div>
+
+        <div class="section-heading">EXAMINATION FEE</div>
+        <div class="paragraph">
+            Candidates are to submit their Examination Application form along with the fee given in the syllabus. The fee may get revised from time to time and the students are required to submit their application form along with the latest fee structure in force. Examination fees once paid are neither refundable nor transferable to a subsequent examination on any account.
+        </div>
+
+        <div class="section-heading">LAST DATE FOR RECEIPT OF EXAMINATION APPLICATION</div>
+        <div class="paragraph">
+            The last dates for receipt of Examination Applications at the IETE HQ office for June and December examinations are 25 April and 25 October respectively or as notified separately. After these dates, Examination Applications will be considered up to 5 May and 5 November with a late fee of Rs.300/-. Any application received beyond these dates will be rejected, irrespective of the date of the bank draft for the fee.
+        </div>
+
+        <div class="section-heading">DATE SHEET</div>
+        <div class="paragraph">
+            The examination schedule is 15-22 June and 15-22 December and will be conducted on all days including holidays and Sundays. The sequence of the papers of exams is listed in respective Syllabi.
+        </div>
+
+        <div class="section-heading">ADMIT CARD</div>
+        <div class="paragraph">
+            Admit Cards will be sent to all the candidates to reach them by about 30th of May/November. In the case of non-receipt of Admit-Card by these dates, the candidate must get in touch with the Examination Centre & IETE HQ and obtain permission to sit in the examination. No complaint in respect of non-receipt of Admit Card will be entertained once the Examination is over.
+        </div>
+        <hr><br>
+        <div class="grid-content">
+        <div class="section-heading" onclick="toggleDropdown('results-dropdown')">
+          RESULTS &#9660; 
+      </div>
+      <div class="dropdown-content" id="results-dropdown">
+          Results of the examinations will be announced on 25 September/25 March for the June and December Examinations respectively and communicated to the candidates through Result Sheets separately.  Result will also be available on IETE Website (www.iete.org).
+      </div>
+      <div class="section-heading" onclick="toggleDropdown('recounting-dropdown')">
+        RECOUNTING OF MARKS &#9660; 
+    </div>
+    <div class="dropdown-content" id="recounting-dropdown">
+        Recounting of marks, if requested, can be got done by paying Rs.100/- (US$10) per subject.  Requests for recounting of marks must be received within 30 days from the date of announcement of results on a separate application.  There is no provision for re-evaluation.
+    </div>
+    <div class="section-heading" onclick="toggleDropdown('improvement-dropdown')">
+      IMPROVEMENT OF MARKS &#9660; 
+  </div>
+  <div class="dropdown-content" id="improvement-dropdown">
+      A candidate while pursuing AMIETE may appear for improvement in any number of papers and avail any number of chances irrespective of marks previously obtained.  If the candidate secures lower marks than already secured, the original marks will hold good.   Fee for improvement is Rs 250/- per paper.  No improvement of marks is allowed in AMIETE Lab Practice examination and project work.  Further, no improvement of marks is allowed in any subject after a student has successfully completed AMIETE.
+  </div>
+
+  <div class="section-heading" onclick="toggleDropdown('awards-dropdown')">
+      AWARDS FOR ACADEMIC EXCELLENCE &#9660; 
+  </div>
+  <div class="dropdown-content" id="awards-dropdown">
+      Five awards have been instituted to give incentive to student members for high level of performance in the AMIETE Examinations.  Details of awards are listed in respective Syllabi.
+  </div>
+
+  <div class="section-heading" onclick="toggleDropdown('affiliation-dropdown')">
+      AFFILIATION/ACCREDITATION &#9660; 
+  </div>
+  <div class="dropdown-content" id="affiliation-dropdown">
+      The Institution of Electronics & Telecommunication Engineers (IETE) neither recognizes nor accepts affiliations of any private coaching Institute.
+  </div>
+
+  <div class="section-heading" onclick="toggleDropdown('recognition-dropdown')">
+      RECOGNITION OF AMIETE &#9660; 
+      </div>
+  <div class="dropdown-content" id="recognition-dropdown">
+      Recognition of AMIETE by state governments/universities/institutions is listed in respective Syllabi.
+  </div>
+  <div class="section-heading" onclick="toggleDropdown('correspondence-dropdown')">
+    CORRESPONDENCE WITH IETE HQ &#9660; <!-- Unicode symbol for a dropdown arrow -->
+</div>
+<div class="dropdown-content" id="correspondence-dropdown">
+  <p>All correspondence must be addressed to the Secretary General of the Institution by designation and not by name.</p>  
+  <ul>
+        <li>Important announcements concerning students and examinations are published in IETE Students Journal.</li>
+        <li>These are also published through general notices despatched to students while forwarding their results.</li>
+        <li>Remittances shall be made by way of crossed Bank Draft only in favor of Secretary General IETE payable at New Delhi.</li>
+        <li>Money Orders/ IPO or cash will not be accepted.</li>
+        <li>Membership renewal fee/ examination fee etc should be paid directly to the HQ IETE and not through a Local Centre of IETE or any other agency.</li>
+    </ul>
+</div>
+<div class="section-heading" onclick="toggleDropdown('change-address-dropdown')">
+  CHANGE OF ADDRESS &#9660; 
+</div>
+<div class="dropdown-content" id="change-address-dropdown">
+  <p>Candidates are advised to intimate their change of address to IETE HQ immediately, quoting their Membership Number, complete address with Pin Code.</p>
+</div>
+
+<div class="section-heading center-last-box" onclick="toggleDropdown('legal-matters-dropdown')">
+  LEGAL MATTERS &#9660; 
+</div>
+<div class="dropdown-content center-last-box "  id="legal-matters-dropdown">
+  <p>Adjudication in respect of legal cases concerning IETE HQ will be as per bye-law 95 of the Institution which is reproduced below:</p>
+  <ul>
+      <li>All Legal cases concerning IETE HQ shall lie within jurisdiction of Delhi courts only.</li>
+  </ul>
+</div><br>
+</div>
+<hr>
+<div class="boxed-container">
+  <h2 id="general-instructions-heading">GENERAL INSTRUCTIONS FOR AMIETE EXAMINATION</h2>
+
+  <p class="paragraph"> Candidate must read carefully the following information and instructions before filling in the prescribed application form for AMIETE Examination.</p>
+  <ol class="lab-exam-eligible">
+    <li>
+      The Institution reserves the right to reject incomplete or illegible application without any reference to the candidate.
+    </li>
+    <li>
+      The last date for receipt of Application Form of AMIETE Examination at the IETE HQ office is 25 October/25 April for December/June Examination or as notified separately. After this date, applications will be considered up to 5 November/5 May with late fee of Rs 300/-.
+    </li>
+    <li>
+      A candidate appearing in Part I of Section B and Electives of Section B must fulfill practical experience requirement. A copy of Lab Practice-I&II Result should be attached with the application form when applying for the first time for Part I of Section B and Electives of Section B papers irrespective of the fact that they were submitted earlier.
+    </li>
+    <li>
+      To avoid delay in processing of applications only the fee concerning exam (i.e. Exam Fee, late fee) and membership fee should be sent along with the Examination application form. Remittance towards other requirement should be sent separately with specific instructions. Examination fee once paid is neither refundable nor adjustable towards a subsequent examination.
+    </li>
+    <li>
+      Separate application for recounting should reach IETE HQ office within one month of declaration of result. Recounting fee should not be combined with any other type of fee.
+    </li>
+    <li>
+      Candidate should clearly mention the Examination Centre and code at which he/she desires to appear for IETE examination.
+    </li>
+    <li>
+      No application for change of Examination Centre will be entertained except in an exceptional case.
+    </li>
+    <li>
+      While seeking exemption in papers, attested copies of qualification certificates and mark sheets are required to be submitted along with exemption fee. Exemptions are not granted in parts. Requests for exemptions for subjects other than those listed should not be made.
+    </li>
+    <li>
+      Photograph (3.5x3.5 cm exact) not more than three months old of the candidate is required to be pasted on the application form and should be attested by a Govt Gazetted Officer or a Corporate Member of the Institution. The candidate should ensure that the photograph is properly attested, dated, and stamped. The name and address of the officer attesting the photo must be given.
+    </li>
+    <li>
+      Candidate should send only the attested copies of certificates along with the application form. Original documents are not required unless specifically asked for.
+    </li>
+    <li>
+      In case of non-receipt of Admit Card by 30th of March/November, candidates are advised to contact IETE HQ and Examination Centre and obtain permission to sit in the examination. No complaint in respect of non-receipt of Admit Card will be entertained once the exam is over.
+    </li>
+    <li>
+      Candidates are advised to contact Examination Superintendent at their Centre for any unforeseen changes in the Examination programme.
+    </li>
+    <li>
+      Fee will be paid by crossed bank draft in favour of Secretary General, IETE, payable at New Delhi. Name and Membership No. of the applicant should be written on the backside of the draft.
+    </li>
+    <li>
+      If a candidate is found to have resorted to, or made attempts to resort to UNFAIR MEANS pertaining to an examination, the Council or the delegated authority may, on receipt of a report to the effect and after its own investigation, take action against the candidate concerned as deemed fit. In addition, the Superintendent of examination has absolute powers to expel the candidate from the examination hall if, in his opinion, the candidate has adopted unfair means in connection with the examination.
+    </li>
+    <li>
+      Any correspondence required to be made in connection with exam applications should contain membership number, name & address of the candidate.
+    </li>
+  </ol>
+</div>
+  </div>
+</section>
+
+<div id="back-to-top">&#8593;</div>
+
+
+<!-- footer  -->
+
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>IETE Chennai</h4>
+          <ul>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="Membership.html">Membership</a></li>
+            <li><a href="courses.html">Courses</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>IETE</h4>
+          <ul>
+            <li><a href="Membership.html">Join Us</a></li>
+            <li><a href="https://www.iete.org/index111.html" target="_blank">IETE</a></li>
+            <li><a href="https://www.iete.org/Gallery.html">Achievements</a></li>
+            <li><a href="https://www.iete.org/publications.html">Publications</a></li>
+          </ul>
+        </div>
+              <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="mailto:youremail@example.com"> Email: ietechennai@gmail.com
+            </a></li>
+            <li><a href="">IETE Chennai centre, No: 37, Conran Smith Road Entrance Peters Road,
+              Gopalapuram, Chennai, Tamil Nadu 600086</a></li>
+  
+            <li><a href="">Phone: 044 2835 0773</a></li>
+          </ul>
+      </div>
+        <div class="footer-col" >
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+          </div>
+    </div>
+    </div>  
+    <div class="copyright" style="margin-bottom: 0;text-align: center   ;">
+      <p>&copy; Copyright IETE Chennai. All Rights Reserved</p>
+    </div>
+  </footer>
+
+<script src="js/Main-script.js"></script>
+<script>
+  // Back to top
+window.addEventListener("scroll", function() {
+  var backToTopButton = document.getElementById("back-to-top");
+  if (window.pageXOffset > 200) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+});
+document.getElementById("back-to-top").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>
