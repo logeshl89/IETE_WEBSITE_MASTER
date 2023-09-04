@@ -60,6 +60,7 @@ nav .navbar .links li a{
   color: #fff;
   font-size: 15px;
   font-weight: 500;
+  	text-transform:capitalize;
 }
 
 .links li:hover .htmlcss-arrow,
@@ -350,6 +351,7 @@ nav .navbar .links li .sub-menu li{
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWDGULVeU-SCzrSKTjfjtvu_DeBFi1aSDBGxe_hac3A&s'); /* Replace with your background image URL */
   background-size: cover;
   background-position: center;
+  filter: brightness(0.4);
 }
 
 
@@ -873,6 +875,7 @@ ul{
 }
 .footer-col .social-links a{
 	display: inline-block;
+
 	height: 40px;
 	width: 40px;
 	background-color: rgba(255,255,255,0.2);
