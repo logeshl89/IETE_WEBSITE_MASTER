@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
     <style>
             header {
             background-color: #007BFF;
@@ -68,10 +71,7 @@
             font-size: 16px;
             margin: 10px 0;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
+
         strong {
             font-weight: bold;
         }
@@ -109,6 +109,7 @@
         .right ul li{
             list-style: none;
             padding: 10px;
+            font-size:18px;
         }
         @media screen and (min-width: 768px) {
             .container a{
@@ -176,86 +177,101 @@ section ul li {
     font-weight: bold;
 }
 
+
+
+/* Define the initial state of the image */
+ img {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+/* Define the hover state and animation */
+ img:hover {
+    transform: scale(1.1); /* Scale the image up by 10% on hover (you can adjust the scale factor) */
+}
+
     </style>
 </head>
 <body>
        <!-- Back to Top Button -->
        <button id="btnScrollToTop" style="
-       color: white; 
-       border: none;
-        outline: none; 
-       cursor: pointer; 
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-        /* width: 50px; */
-        height: 50px;
-        border-radius: 50%;
-        background: red; 
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-        ">
-<i class="material-icons"> arrow_upward</i>
-</button>
+              color: white;
+              border: none;
+               outline: none;
+              cursor: pointer;
+               position: fixed;
+               right: 10px;
+               bottom: 10px;
+               /* width: 50px; */
+               height: 50px;
+               border-radius: 50%;
+               background: red;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+               ">
+           <i class="material-icons"> arrow_upward</i>
+       </button>
+       <nav>
+           <div class="navbar">
+               <i class='bx bx-menu'></i>
+               <div class="logo">
+                   <img src="http://ietechennai.in/assets/img/logo.png" alt="Logo of Iete" style="height: 40px; width: 40px;">
+                   <a href="index.html" title="The Institution of Electronics and Telecommunication Engineers ">IETE</a></div>
+               <div class="nav-links">
+                   <div class="sidebar-logo">
+                       <span class="logo-name" title="The Institution of Electronics and Telecommunication Engineers ">IETE</span>
+                       <i class='bx bx-x' ></i>
+                   </div>
+                   <ul class="links">
+                       <li><a href="index.html">Home</a></li>
+                       <li><a href="executive_members.html">Executive Committe</a></li>
+                       <li><a href="Membership.html">Membership</a></li>
+                       <li>
+                           <a href="#">conferences</a>
+                           <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                           <ul class="htmlCss-sub-menu sub-menu">
+                               <li><a href="Events.html">Events</a></li>
+                               <li class="more">
+                  <span><a href="#">NewLetter</a>
+                    <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                  </span>
+                                   <ul class="more-sub-menu sub-menu">
+                                       <li><a href="http://ietechennai.in/assets/pdf/chenlink1_3.pdf" target="_blank">vol.1,No.3</a></li>
 
- <nav>
-  <div class="navbar">
-    <i class='bx bx-menu'></i>
-    <div class="logo"><a href="index.html" title="The Institution of Electronics and Telecommunication Engineers ">IETE</a></div>
-    <div class="nav-links">
-      <div class="sidebar-logo">
-        <span class="logo-name" title="The Institution of Electronics and Telecommunication Engineers ">CodingLab</span>
-        <i class='bx bx-x' ></i>
-      </div>
-      <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        
-        <li><a href="executive_members.html">Executive Committe</a></li>
-        <li><a href="Membership.html">Membership</a></li>  
-        <li>
-          <a href="#">conferences</a>
-          <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-          <ul class="htmlCss-sub-menu sub-menu">
-            <li><a href="Events.html">Events</a></li>
-            <li class="more">
-              <span><a href="#">NewLetter</a>
-                <i class='bx bxs-chevron-right arrow more-arrow'></i>
-              </span>
-              <ul class="more-sub-menu sub-menu">
-                <li><a href="http://ietechennai.in/assets/pdf/chenlink1_3.pdf">vol.1,No.3</a></li>
+                                       <li><a href="http://ietechennai.in/assets/pdf/chenlink1_2.pdf" target="_blank">vol.1,No.2</a></li>
 
-                <li><a href="http://ietechennai.in/assets/pdf/chenlink1_2.pdf">vol.1,No.2</a></li>
+                                       <li><a href="http://ietechennai.in/assets/pdf/chenlink1_1.pdf" target="_blank">vol.1,No.3</a></li>
 
-                <li><a href="http://ietechennai.in/assets/pdf/chenlink1_1.pdf">vol.1,No.3</a></li>
+                                   </ul>
+                               </li>
+                               <li class="more">
+                  <span><a href="#">Chencon</a>
+                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                </span>
+                                   <ul class="more-sub-menu sub-menu">
+                                       <li><a href="conference.html">2021</a></li>
+                                       <li><a href="http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf">2022</a></li>
+                                   </ul>
+                               </li>
+                           </ul>
+                       </li>
+                       <i class='bx bxs-chevron-down js-arrow arrow ' style="color: transparent; margin: 0;padding: 0;"></i>
+                       <li><a href="about-us.html">About</a></li>
+                       <li><a href="contact.html">Contact us</a></li>
+                       <li><a href="courses.html">Courses</a></li>
+                       <li><button><a href="Membership.html">Join Us</a> </button></li>
 
-               </ul>
-              </li>
-            <li class="more">
-              <span><a href="#">Chencon</a>
-              <i class='bx bxs-chevron-right arrow more-arrow'></i>
-            </span>
-              <ul class="more-sub-menu sub-menu">
-                <li><a href="conference.html">2021</a></li>
-                <li><a href="http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf">2022</a></li>
-               </ul>
-            </li>
-          </ul>
-        </li>
-          <i class='bx bxs-chevron-down js-arrow arrow ' style="color: transparent; margin: 0;padding: 0;"></i>
-        <li><a href="about-us.html">ABOUT US</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
-        <li><button class="button"  ><a href="Membership.html">Join Us</a> </button></li>
-
-      </ul>
-    </div>
-    <div class="search-box" style="background-color: transparent; margin: 0; padding: 0;">
-      <i class='bx bx-search'style="color: transparent; margin: 0; padding: 0;"></i>
-      <div class="input-box">
-      </div>
-    </div>
-  </div>
-</nav>
+                   </ul>
+               </div>
+               <div class="search-box" style="background-color: transparent; margin: 0; padding: 0;">
+                   <i class='bx bx-search'style="color: transparent; margin: 0; padding: 0;"></i>
+                   <div class="input-box">
+                   </div>
+               </div>
+           </div>
+       </nav>
     <header>
-        <h1>IETE CHENCON 2022</h1>
+        <h1 style="margin-top:40px;">IETE CHENCON 2022</h1>
         <h2>International Conference on Power of AI and ML for Human Empowerment</h2>
     </header>
     <div class="container">
@@ -269,11 +285,11 @@ section ul li {
           <a href="#" class="button button-center" style="margin-top: 10px;">ChenCon 2022 Proceedings</a>
       </div>
       <div class="right">
-          <img src="http://ietechennai.in/assets/img/events/chencon2022.jpeg" alt="Conference Image">
+          <img src="http://ietechennai.in/assets/img/events/chencon2022.jpeg" style="margin-top:20px;border-radius:5px;width:450px;height:450px;" alt="Conference Image">
       </div>
   </div>    <section>
         <h2>Scope of the Conference</h2>
-        <p>Recently, the use of AI/ML technology has been exponentially increasing in our daily lives. AI/ML applications represent an important evolution in computer science and data processing that is quickly transforming a vast array of domains. IETE CHENCON 2022 provides vibrant opportunities for the delegates to exchange new ideas, applications, practical challenges encountered and to leverage AI and ML technologies. The technical program of the conference will consist of invited keynote talks and paper presentations. IETE CHENCON 2022 accepts technical paper presentation from research scholars, faculty, students, and industry professionals in emerging areas of AI and ML applications but not limited to:</p>
+        <p style="font-size:18px;">Recently, the use of AI/ML technology has been exponentially increasing in our daily lives. AI/ML applications represent an important evolution in computer science and data processing that is quickly transforming a vast array of domains. IETE CHENCON 2022 provides vibrant opportunities for the delegates to exchange new ideas, applications, practical challenges encountered and to leverage AI and ML technologies. The technical program of the conference will consist of invited keynote talks and paper presentations. IETE CHENCON 2022 accepts technical paper presentation from research scholars, faculty, students, and industry professionals in emerging areas of AI and ML applications but not limited to:</p>
         <section class="columns">
             <h2>Track - 1: AI Enabled Technologies</h2>
             <ul >
@@ -313,14 +329,14 @@ section ul li {
 
     <section>
         <h2>Submission Guidelines</h2>
-        <p>Prospective authors are invited to submit full papers describing original, previously unpublished, complete work in four pages in A4 IEEE double column conference template, including figures, results, and references. Submitted papers will be reviewed by two to three technical committee or reviewers. Accepted and registered papers of IETE CHENCON 2022 will be published in the conference proceedings. Extended versions of the accepted and presented papers will be recommended for publication in IETE Journals, SCOPUS, SCI, and other indexed journals. Authors must submit the papers through their EasyChair account using the following link: <a href="https://easychair.org/conferences/?conf=ietechencon2022">EasyChair Submission</a> or submit the papers to the Email ID: <a href="mailto:chencon2022@gmail.com">chencon2022@gmail.com</a></p>
+        <p style="font-size:18px;">Prospective authors are invited to submit full papers describing original, previously unpublished, complete work in four pages in A4 IEEE double column conference template, including figures, results, and references. Submitted papers will be reviewed by two to three technical committee or reviewers. Accepted and registered papers of IETE CHENCON 2022 will be published in the conference proceedings. Extended versions of the accepted and presented papers will be recommended for publication in IETE Journals, SCOPUS, SCI, and other indexed journals. Authors must submit the papers through their EasyChair account using the following link: <a href="https://easychair.org/conferences/?conf=ietechencon2022">EasyChair Submission</a> or submit the papers to the Email ID: <a href="mailto:chencon2022@gmail.com">chencon2022@gmail.com</a></p>
     </section>
 
     <div class="containers  contact-dates">
       <div class="left">
           <h2>Contact Information</h2>
-          <p><strong>Organizing Chair:</strong> Dr. N. Venkateswaran</p>
-          <p><strong>Conference Co-Chairs:</strong> Mr. Arun, Mrs. T.J. Jeyaprabha</p>
+          <p><strong>Organizing Chair:</strong>     Dr. N. Venkateswaran</p>
+          <p><strong>Conference Co-Chairs:</strong>     Mr. Arun, Mrs. T.J. Jeyaprabha</p>
           <p><strong>Contact:</strong></p>
           <p>Mobile: 72000 96048</p>
           <p>Phone: 044-28350773</p>
@@ -387,6 +403,17 @@ section ul li {
   </div>
 
 </footer>
+
+
+       <script >
+           const btnScrollToTop =document.querySelector("#btnScrollToTop");
+btnScrollToTop.addEventListener("click",function(){
+  window.scrollTo({
+    top:0,left:0,
+      behavior:"smooth"
+  });
+});
+       </script>
 <script src="js/Main-script.js"></script>
 </body>
 </html>

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/contact-style.css">
     <link rel="stylesheet" href="css/Main-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 <body>
     <link rel="stylesheet" href="css/Main-style.css">
@@ -26,7 +27,8 @@ body {
 
 .containers {
   background: #F8F8F8;
-  width: 900px;
+   width: 1000px;
+    
   height: 650px;
   margin: 5% auto;
   box-shadow: 0px 0px 10px #C8C7D9;
@@ -120,79 +122,95 @@ body {
 }
 
 .question h3 {
-    font-size: 1.2em;
+    font-size: 18px;
     font-weight: 700;
     color: #242424;
     margin-bottom: 10px;
 }
 
 .question p {
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 400;
     color: #555555;
 }
 
       
  </style>
- <nav>
-    <div class="navbar">
-      <i class='bx bx-menu'></i>
-      <div class="logo">
-        <img src="http://ietechennai.in/assets/img/logo.png" alt="Logo of Iete" style="height: 40px; width: 40px;">
-        <a href="index.html" title="The Institution of Electronics and Telecommunication Engineers ">IETE</a></div>
-      <div class="nav-links">
-        <div class="sidebar-logo">
-          <span class="logo-name" title="The Institution of Electronics and Telecommunication Engineers ">IETE</span>
-          <i class='bx bx-x' ></i>
-        </div>
-        <ul class="links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="executive_members.html">Executive Committe</a></li>
-          <li><a href="Membership.html">Membership</a></li>  
-          <li>
-            <a href="#">conferences</a>
-            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-            <ul class="htmlCss-sub-menu sub-menu">
-              <li><a href="Events.html">Events</a></li>
-              <li class="more">
-                <span><a href="#">NewLetter</a>
+    <button id="btnScrollToTop" style="
+              color: white;
+              border: none;
+               outline: none;
+              cursor: pointer;
+               position: fixed;
+               right: 10px;
+               bottom: 10px;
+               /* width: 50px; */
+               height: 50px;
+               border-radius: 50%;
+               background: red;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+               ">
+        <i class="material-icons"> arrow_upward</i>
+    </button>
+    <nav>
+        <div class="navbar">
+            <i class='bx bx-menu'></i>
+            <div class="logo">
+                <img src="http://ietechennai.in/assets/img/logo.png" alt="Logo of Iete" style="height: 40px; width: 40px;">
+                <a href="index.html" title="The Institution of Electronics and Telecommunication Engineers ">IETE</a></div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name" title="The Institution of Electronics and Telecommunication Engineers ">IETE</span>
+                    <i class='bx bx-x' ></i>
+                </div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="executive_members.html">Executive Committe</a></li>
+                    <li><a href="Membership.html">Membership</a></li>
+                    <li>
+                        <a href="#">conferences</a>
+                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                        <ul class="htmlCss-sub-menu sub-menu">
+                            <li><a href="Events.html">Events</a></li>
+                            <li class="more">
+                  <span><a href="#">NewLetter</a>
+                    <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                  </span>
+                                <ul class="more-sub-menu sub-menu">
+                                    <li><a href="http://ietechennai.in/assets/pdf/chenlink1_3.pdf" target="_blank">vol.1,No.3</a></li>
+
+                                    <li><a href="http://ietechennai.in/assets/pdf/chenlink1_2.pdf" target="_blank">vol.1,No.2</a></li>
+
+                                    <li><a href="http://ietechennai.in/assets/pdf/chenlink1_1.pdf" target="_blank">vol.1,No.3</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="more">
+                  <span><a href="#">Chencon</a>
                   <i class='bx bxs-chevron-right arrow more-arrow'></i>
                 </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="http://ietechennai.in/assets/pdf/chenlink1_3.pdf" target="_blank">vol.1,No.3</a></li>
+                                <ul class="more-sub-menu sub-menu">
+                                    <li><a href="conference.html">2021</a></li>
+                                    <li><a href="http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf">2022</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <i class='bx bxs-chevron-down js-arrow arrow ' style="color: transparent; margin: 0;padding: 0;"></i>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><button><a href="Membership.html">Join Us</a> </button></li>
 
-                  <li><a href="http://ietechennai.in/assets/pdf/chenlink1_2.pdf" target="_blank">vol.1,No.2</a></li>
-
-                  <li><a href="http://ietechennai.in/assets/pdf/chenlink1_1.pdf" target="_blank">vol.1,No.3</a></li>
-
-                 </ul>
-                </li>
-              <li class="more">
-                <span><a href="#">Chencon</a>
-                <i class='bx bxs-chevron-right arrow more-arrow'></i>
-              </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="conference.html">2021</a></li>
-                  <li><a href="http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf">2022</a></li>
-                 </ul>
-              </li>
-            </ul>
-          </li>
-            <i class='bx bxs-chevron-down js-arrow arrow ' style="color: transparent; margin: 0;padding: 0;"></i>
-          <li><a href="about-us.html">ABOUT US</a></li>
-          <li><a href="contact.html">CONTACT US</a></li>
-          <li><a href="courses.html">Courses</a></li>
-            <li><button><a href="Membership.html">Join Us</a> </button></li>
-
-        </ul>
-      </div>
-      <div class="search-box" style="background-color: transparent; margin: 0; padding: 0;">
-        <i class='bx bx-search'style="color: transparent; margin: 0; padding: 0;"></i>
-        <div class="input-box">
+                </ul>
+            </div>
+            <div class="search-box" style="background-color: transparent; margin: 0; padding: 0;">
+                <i class='bx bx-search'style="color: transparent; margin: 0; padding: 0;"></i>
+                <div class="input-box">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>   
+    </nav>
         
      
 
@@ -208,7 +226,7 @@ body {
             <input type="email" name="e-mail" placeholder="Your E-mail Adress" />
             <input type="text" name="name" id="" placeholder="Subject">
             <textarea name="text" id="" rows="5" placeholder="Your Message"></textarea>
-            <button class="btn-send">Send a Message</button>
+            <button class="btn-send" style="background-color: #0078d4;">Send a Message</button>
         </form>
     </div>
 </div>
@@ -236,7 +254,6 @@ body {
 
 
     <!-- Back to top -->
-  <div id="back-to-top">&#8593;</div>
 
   <footer class="footer">
     <div class="container">
@@ -290,7 +307,16 @@ body {
     
  
 </body>
-<script src="js/Main-script.js"></script>
+<!-- <script src="js/Main-script.js"></script> -->
+<script>
+    const btnScrollToTop =document.querySelector("#btnScrollToTop");
+btnScrollToTop.addEventListener("click",function(){
+  window.scrollTo({
+    top:0,left:0,
+      behavior:"smooth"
+  });
+});
+</script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

@@ -16,7 +16,8 @@ nav{
   width: 100%;
   height: 100%;
   height: 70px;
-  background: #3E8DA8;
+  /* background: #3E8DA8; */
+  background: #5A838C;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
@@ -83,7 +84,7 @@ nav .navbar .links li .sub-menu{
   top: 70px;
   left: 0;
   line-height: 40px;
-  background: #3E8DA8;
+  background: #5A838C;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
   display: none;
@@ -351,7 +352,7 @@ nav .navbar .links li .sub-menu li{
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWDGULVeU-SCzrSKTjfjtvu_DeBFi1aSDBGxe_hac3A&s'); /* Replace with your background image URL */
   background-size: cover;
   background-position: center;
-  filter: brightness(0.4);
+  filter: brightness(0.3);
 }
 
 
