@@ -218,7 +218,7 @@ position: relative;
 }
 
 .image-section img {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     display: block;
     transition: transform 0.3s ease;
@@ -273,7 +273,7 @@ position: relative;
         .popup-image {
             flex: 1;
             padding-right: 20px;
-            width: 100%;
+            /* width: 100%; */
         }
 
         .popup-image img {
@@ -297,14 +297,14 @@ position: relative;
     font-size: 16px; /* Adjust the font size as needed */
 }
 /* Adjust these styles for left-centered image within the pop-up */
-.popup-image {
+#popupImage {
     flex: 1;
     display: flex;
     align-items: center;
     padding-right: 20px;
 }
 
-.popup-image img {
+#popupImage {
     width: 300px;
     height: 400px;
     height: auto;
@@ -326,18 +326,9 @@ position: relative;
     max-height: 600px; /* Maximum height for the popup */
 }
 
-.popup-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-    width: 500px; /* Adjust the width as needed */
-    height: 500px; /* Adjust the height as needed */
-}
-
-.popup-image img {
-    width: 200px;
-    height: 500px;
+#popupImage {
+    width: 400px;
+    height: 400px;
     height: auto;
     margin-top: 0; /* Remove margin-top to center the image vertically */
 }
@@ -353,18 +344,15 @@ position: relative;
     padding-right: 20px; /* Add spacing between text and image */
 }
 
-.popup-image {
+#popupImage {
+
     flex: 1;
     display: flex;
     flex-direction: column; /* Place the image below the date */
     align-items: center; /* Center the image horizontally */
 }
 
-.popup-image img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 0;
-}
+
 
 /* Adjust font sizes and styles as needed */
 .popup-details h4 {
@@ -373,12 +361,16 @@ position: relative;
 }
 
 .popup-text p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .popup-details p {
-    font-size: 16px;
+    font-size: 18px;
 }
+
+/* Style the image in the popup */
+
+
 
     </style>
 </head>
@@ -716,8 +708,7 @@ position: relative;
 </footer>
 </body>
 <script>
-   
-   document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.getElementById("popupContainer");
     const closePopup = document.getElementById("closePopup");
     const popupImage = document.getElementById("popupImage");
@@ -727,12 +718,16 @@ position: relative;
     readMoreButtons.forEach((button) => {
         button.addEventListener("click", function () {
             const card = button.closest(".card");
-             const articleTitle = card.querySelector(".article h4").textContent;
+            const articleTitle = card.querySelector(".article h4").textContent;
             const articleContent = card.querySelector(".article p").textContent;
-            const startdate=card.querySelector(".posted-date p").textContent;
-        
-            popupText.innerHTML = `<h1>${articleTitle}</h1><br/><hr/><br/><br/>${articleContent}<p>${startdate}</p>`;
+            const startdate = card.querySelector(".posted-date p").textContent;
+            const imageURL = card.querySelector(".image-section img").src; // Get the image source URL
 
+            // Update the popup content including the image
+            popupText.innerHTML = `<h1>${articleTitle}</h1><br/><hr/><br/><br/><img id="popupImage" src="${imageURL}" alt="Image"><br/><br/><p>${articleContent}<p>${startdate}</p>`;
+
+            // Set the image source dynamically
+            // popupImage.src = imageURL;
 
             popupContainer.style.display = "block";
         });
@@ -742,7 +737,11 @@ position: relative;
         popupContainer.style.display = "none";
     });
 });
-</script>
+
+
+ 
+ </script>
+ 
 <script >
     const btnScrollToTop =document.querySelector("#btnScrollToTop");
 btnScrollToTop.addEventListener("click",function(){
